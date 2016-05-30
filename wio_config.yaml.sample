@@ -1,0 +1,12 @@
+- access_token: please_replace_to_your_access_talken
+  src_type:     analog_in
+  dst_topic:    home_cds
+  dst_key:      cds
+- access_token: please_replace_to_your_access_talken
+  src_type:     dht11_humidity
+  dst_topic:    home_dht11
+  dst_key:      humidity
+- access_token: please_replace_to_your_access_talken
+  src_type:     dht11_temperature
+  dst_topic:    home_dht11
+  dst_key:      temperature

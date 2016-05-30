@@ -1,0 +1,30 @@
+;
+; wio2mqtt.conf - for supervisord configuration file
+;
+; install
+;     $ pwd
+;     $ sudo cp wio2mqtt.conf.sample /etc/supervisor/conf.d/wio2mqtt.conf
+;     $ sudo vi /etc/supervisor/conf.d/wio2mqtt.conf
+;       (fix path, etc...)
+;     $ sudo supervisorctl reread
+;     $ sudo supervisorctl add wio2mqtt
+;     $ sudo supervisorctl status
+;     wio2mqtt                  RUNNING    pid 8192, uptime 0:00:30
+;
+; see also
+;     Supervisor: A Process Control System
+;     http://supervisord.org/
+;
+[program:wio2mqtt]
+command         = /usr/bin/ruby /path/to/wio2mqtt/wio2mqtt.rb
+numprocs        = 1
+autostart       = true
+autorestart     = true
+user            = username
+environment     = HOME=/home/username/
+redirect_stderr = true
+stdout_logfile  = /path/to/wio2mqtt/log.txt
+startsecs               = 7
+startretries            = 10
+stdout_logfile_maxbytes = 50MB
+stdout_logfile_backups  = 3
