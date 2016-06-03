@@ -38,7 +38,7 @@ How to use
           dst_topic:    home_dht11
           dst_key:      temperature
     
-    $ ruby wio2mqtt
+    $ ruby wio2mqtt.rb
 
 for supervisord
 ----
